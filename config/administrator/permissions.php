@@ -2,9 +2,9 @@
 use App\Models\Permission;
 
 return [
-    'title'   => '用户组权限',
-    'heading' => '用户组权限',
-    'single'  => '用户组权限',
+    'title'   => 'Permissions',
+    'heading' => 'Permissions',
+    'single'  => 'Permissions',
     'model'   => Permission::class,
 
     'permission' => function () {
@@ -39,14 +39,14 @@ return [
             'sortable' => false,
         ],
         'description' => [
-            'title'    => '描述',
+            'title'    => 'Description',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return empty($value) ? 'N/A' : $value;
             },
         ],
         'roles' => [
-            'title'  => '用户组',
+            'title'  => 'Roles',
             'output' => function ($value, $model) {
                 $model->load('roles');
                 $result = [];
@@ -59,31 +59,31 @@ return [
             'sortable' => false,
         ],
         'operation' => [
-            'title'    => '管理',
+            'title'    => 'Operation',
             'sortable' => false,
         ],
     ],
 
     'edit_fields' => [
         'name' => [
-            'title' => '标示（请慎重修改）',
+            'title' => 'Name',
         ],
         'display_name' => [
-            'title' => '权限名称',
+            'title' => 'Display Name',
         ],
         'description' => [
-            'title' => '描述',
+            'title' => 'Description',
         ],
     ],
     'filters' => [
         'name' => [
-            'title' => '标示',
+            'title' => 'Name',
         ],
         'display_name' => [
-            'title' => '权限名称',
+            'title' => 'Display Name',
         ],
         'description' => [
-            'title' => '描述',
+            'title' => 'Description',
         ],
     ],
 

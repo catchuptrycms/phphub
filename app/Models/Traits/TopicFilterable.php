@@ -64,11 +64,11 @@ trait TopicFilterable
                 return $query->pinned()->recentReply();
                 break;
 
-            // for api，分类：教程
+            // for api，Categories：教程
             case 'wiki':
                 return $query->where('category_id', 6)->pinned()->recent();
                 break;
-            // for api，分类：招聘
+            // for api，Categories：招聘
             case 'jobs':
                 return $query->where('category_id', 1)->pinned()->recent();
                 break;

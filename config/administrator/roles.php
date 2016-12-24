@@ -3,9 +3,9 @@
 use App\Models\Role;
 
 return [
-    'title'   => '用户组',
-    'heading' => '用户组',
-    'single'  => '用户组',
+    'title'   => 'Roles',
+    'heading' => 'Roles',
+    'single'  => 'Roles',
     'model'   => Role::class,
 
     'permission'=> function()
@@ -25,7 +25,7 @@ return [
             'title' => '标识'
         ],
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operation',
             'output' => function ($value, $model) {
                 return $value;
             },
@@ -42,7 +42,7 @@ return [
         ],
         'description' => [
             'type' => 'textarea',
-            'title' => '描述',
+            'title' => 'Description',
         ],
         'perms' => array(
             'type' => 'relationship',

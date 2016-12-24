@@ -3,9 +3,9 @@
 use App\Models\User;
 
 return [
-    'title'   => '用户',
-    'heading' => '用户',
-    'single'  => '用户',
+    'title'   => 'user',
+    'heading' => 'user',
+    'single'  => 'user',
     'model'   => User::class,
 
     'permission'=> function()
@@ -52,7 +52,7 @@ return [
             'title' => '邮箱',
         ],
         'is_banned' => [
-            'title'  => '是否被屏蔽',
+            'title'  => 'is blocked',
             'output' => function ($value) {
                 return admin_enum_style_output($value, true);
             },
@@ -71,7 +71,7 @@ return [
             },
         ],
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operation',
             'output' => function ($value, $model) {
                 return $value;
             },
@@ -101,11 +101,11 @@ return [
             'title'  => '注册来源',
         ],
         'is_banned' => [
-            'title'    => '是否被屏蔽',
+            'title'    => 'is blocked',
             'type'     => 'enum',
             'options'  => [
-                'yes' => '是',
-                'no'  => '否',
+                'yes' => 'Yes',
+                'no'  => 'No',
             ],
         ],
         'city' => [
@@ -140,7 +140,7 @@ return [
         ],
         'roles' => array(
             'type'       => 'relationship',
-            'title'      => '用户组',
+            'title'      => 'Roles',
             'name_field' => 'display_name',
         ),
         'register_source' => [
@@ -149,7 +149,7 @@ return [
     ],
     'filters' => [
         'id' => [
-            'title' => '用户 ID',
+            'title' => 'user ID',
         ],
         'name' => [
             'title' => '姓名',
@@ -165,23 +165,23 @@ return [
         ],
         'roles' => [
             'type'       => 'relationship',
-            'title'      => '用户组',
+            'title'      => 'Roles',
             'name_field' => 'display_name',
         ],
         'is_banned' => [
-            'title'    => '是否被屏蔽',
+            'title'    => 'is blocked',
             'type'     => 'enum',
             'options'  => [
-                'yes' => '是',
-                'no'  => '否',
+                'yes' => 'Yes',
+                'no'  => 'No',
             ],
         ],
         'email_notify_enabled' => [
             'title'    => '是否开启邮件提醒',
             'type'     => 'enum',
             'options'  => [
-                'yes' => '是',
-                'no'  => '否',
+                'yes' => 'Yes',
+                'no'  => 'No',
             ],
         ],
         'city' => [

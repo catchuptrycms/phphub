@@ -3,9 +3,9 @@
 use App\Models\Link;
 
 return [
-    'title'   => '友情链接',
-    'heading' => '友情链接',
-    'single'  => '友情链接',
+    'title'   => 'Links',
+    'heading' => 'Links',
+    'single'  => 'Links',
     'model'   => Link::class,
 
     'columns' => [
@@ -13,29 +13,29 @@ return [
             'title' => 'ID',
         ],
         'title' => [
-            'title'    => '名称',
+            'title'    => 'Name',
             'sortable' => false,
         ],
         'link' => [
-            'title'    => '链接',
+            'title'    => 'Link',
             'sortable' => false,
         ],
         'cover' => [
-            'title'    => '图片',
+            'title'    => 'image url',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return $value ? "<img src='$value' width='200' height='100'>" : 'N/A';
             },
         ],
         'is_enabled' => [
-            'title'    => '是否启用',
+            'title'    => 'enabled',
             'output'   => function ($value) {
                 return admin_enum_style_output($value);
             },
             'sortable' => false,
         ],
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operation',
             'output' => function ($value, $model) {
                 return $value;
             },
@@ -44,13 +44,13 @@ return [
     ],
     'edit_fields' => [
         'title' => [
-            'title'    => '名称',
+            'title'    => 'Name',
         ],
         'link' => [
-            'title'    => '链接',
+            'title'    => 'Link',
         ],
         'cover' => [
-            'title'             => '封面',
+            'title'             => 'Cover',
             'type'              => 'image',
             'location'          => public_path() . '/uploads/banners/',
             'naming'            => 'random',
@@ -61,10 +61,10 @@ return [
     ],
     'filters' => [
         'id' => [
-            'title' => '标签 ID',
+            'title' => 'Tags ID',
         ],
         'title' => [
-            'title' => '名称',
+            'title' => 'Name',
         ],
     ],
     'actions' => [

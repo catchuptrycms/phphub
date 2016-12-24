@@ -3,9 +3,9 @@
 use App\Models\Reply;
 
 return [
-    'title'   => '回复',
-    'heading' => '回复',
-    'single'  => '回复',
+    'title'   => 'Replies',
+    'heading' => 'Replies',
+    'single'  => 'Replies',
     'model'   => Reply::class,
 
     'columns' => [
@@ -14,7 +14,7 @@ return [
             'title' => 'ID',
         ],
         'user' => [
-            'title'    => '用户',
+            'title'    => 'user',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return admin_link(
@@ -25,7 +25,7 @@ return [
             },
         ],
         'topic' => [
-            'title'    => '话题',
+            'title'    => 'Topic',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return admin_link(
@@ -36,13 +36,13 @@ return [
             },
         ],
         'is_blocked' => [
-            'title'    => '是否被屏蔽',
+            'title'    => 'is blocked',
         ],
         'vote_count' => [
-            'title'    => '投票数量',
+            'title'    => 'Vote Count',
         ],
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operation',
             'output' => function ($value, $model) {
 
             },
@@ -51,7 +51,7 @@ return [
     ],
     'edit_fields' => [
         'user' => [
-            'title'              => '用户',
+            'title'              => 'user',
             'type'               => 'relationship',
             'name_field'         => 'name',
             'autocomplete'       => true,
@@ -59,7 +59,7 @@ return [
             'options_sort_field' => 'id',
         ],
         'topic' => [
-            'title'              => '话题',
+            'title'              => 'Topic',
             'type'               => 'relationship',
             'name_field'         => 'title',
             'autocomplete'       => true,
@@ -67,26 +67,26 @@ return [
             'options_sort_field' => 'id',
         ],
         'body_original' => [
-            'title'    => 'Markdown 原始内容',
-            'hint'     => '请使用 Markdown 格式填写',
+            'title'    => 'Markdown Original Content',
+            'hint'     => 'Please use Markdown format',
             'type'     => 'textarea',
         ],
         'is_blocked' => [
-            'title'    => '是否被屏蔽',
+            'title'    => 'is blocked',
             'type'     => 'enum',
             'options'  => [
-                'yes' => '是',
-                'no'  => '否',
+                'yes' => 'Yes',
+                'no'  => 'No',
             ],
             'value' => 'no',
         ],
         'vote_count' => [
-            'title'    => '投票数量',
+            'title'    => 'Vote Count',
         ],
     ],
     'filters' => [
         'user' => [
-            'title'              => '用户',
+            'title'              => 'user',
             'type'               => 'relationship',
             'name_field'         => 'name',
             'autocomplete'       => true,
@@ -94,7 +94,7 @@ return [
             'options_sort_field' => 'id',
         ],
         'topic' => [
-            'title'              => '话题',
+            'title'              => 'Topic',
             'type'               => 'relationship',
             'name_field'         => 'title',
             'autocomplete'       => true,
@@ -102,19 +102,19 @@ return [
             'options_sort_field' => 'id',
         ],
         'is_blocked' => [
-            'title'    => '是否被屏蔽',
+            'title'    => 'is blocked',
             'type'     => 'enum',
             'options'  => [
-                'yes' => '是',
-                'no'  => '否',
+                'yes' => 'Yes',
+                'no'  => 'No',
             ],
         ],
         'body_original' => [
-            'title'    => '回复内容',
+            'title'    => 'Original Body',
         ],
         'vote_count' => [
             'type'                => 'number',
-            'title'               => '查看次数',
+            'title'               => 'Vote Count',
             'thousands_separator' => ',', //optional, defaults to ','
             'decimal_separator'   => '.',   //optional, defaults to '.'
         ],
@@ -123,6 +123,6 @@ return [
         'body_original' => 'required'
     ],
     'messages' => [
-        'body_original.required' => '请填写回复内容',
+        'body_original.required' => 'Please fill in',
     ],
 ];

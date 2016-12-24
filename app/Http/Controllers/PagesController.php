@@ -17,8 +17,9 @@ class PagesController extends Controller
     public function home(Topic $topic)
     {
         $topics = $topic->getTopicsWithFilter('excellent');
+        $currentUser = \Auth::user();
         $banners = Banner::allByPosition();
-        return view('pages.home', compact('topics', 'banners'));
+        return view('pages.home', compact('topics', 'banners', 'currentUser'));
     }
 
     public function about()

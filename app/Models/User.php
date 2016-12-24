@@ -10,7 +10,7 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Laracasts\Presenter\PresentableTrait;
 use Venturecraft\Revisionable\RevisionableTrait;
-//use Overtrue\LaravelFollow\FollowTrait;
+use App\Models\Traits\FollowTrait;
 use App\Jobs\SendActivateMail;
 use App\Models\Traits\UserRememberTokenHelper;
 use App\Models\Traits\UserSocialiteHelper;
@@ -36,7 +36,7 @@ class User extends Model implements AuthenticatableContract,
         EntrustUserTrait::can as may;
     }
     use SoftDeletes { restore as private restoreSoftDelete; }
-    //use FollowTrait;
+    use FollowTrait;
     protected $dates = ['deleted_at'];
 
     protected $table   = 'users';

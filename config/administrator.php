@@ -21,7 +21,7 @@ return array(
      *
      * @type string
      */
-    'title' => 'PHPHub 管理后台',
+    'title' => 'PHPHub',
 
     /*
      * The path to your model config directory
@@ -59,18 +59,18 @@ return array(
      *	)
      */
     'menu' => [
-        '用户管理' => [
+        'User Management' => [
             'users',
             'roles',
             'permissions',
         ],
-        '内容管理' => [
+        'Content Management' => [
             'topics',
             'replies',
             'categories',
             'tags'
         ],
-        '站点管理' => [
+        'Site Management' => [
             'banners',
             'links',
             'sites',
@@ -115,14 +115,14 @@ return array(
      *
      * @type string
      */
-    'dashboard_view' => '',
+    'dashboard_view' => 'administrator::index',
 
     /*
      * The menu item that should be used as the default landing page of the administrative section
      *
      * @type string
      */
-    'home_page' => 'site_statuses',
+    'home_page' => 'topics',
 
     /*
      * The route to which the user will be taken when they click the "back to site" button

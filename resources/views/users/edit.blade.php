@@ -54,7 +54,7 @@
                   <input class="form-control" name="real_name" type="text" value="{{ $user->real_name }}">
               </div>
               <div class="col-sm-4 help-block">
-                {{ lang('Real Name example: 李小明') }}
+                {{ lang('Real Name example:') }}
               </div>
           </div>
 
@@ -89,12 +89,12 @@
           </div>
 
           <div class="form-group">
-              <label for="" class="col-sm-2 control-label">微博个人页面</label>
+              <label for="" class="col-sm-2 control-label">Microblogging Personal Page</label>
               <div class="col-sm-6">
                   <input class="form-control" name="weibo_link" type="text" value="{{ $user->weibo_link}}">
               </div>
               <div class="col-sm-4 help-block">
-                微博个人主页链接，如：http://weibo.com/laravelnews
+                  Microblogging personal home page links, such as：http://weibo.com/laravelnews
               </div>
           </div>
 

@@ -19,40 +19,40 @@ return [
             'title' => 'ID',
         ],
         'position' => [
-            'title' => '位置',
+            'title' => 'Position',
         ],
         'title' => [
-            'title'  => '标题',
+            'title'  => 'Title',
             'output' => function ($value, $model) {
                 return $model->link ? "<a href='{$model->link}' target='_blank'>{$value}</a>" : $value;
             },
         ],
         'target' => [
-            'title'  => '打开方式',
+            'title'  => 'Target',
             'output' => function ($value) {
-                return $value == '_blank' ? '新窗口打开' : '本站打开';
+                return $value == '_blank' ? '_new' : '_blank';
             },
         ],
         'image_url' => [
-            'title'    => '图片',
+            'title'    => 'image url',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return $value ? "<img src='$value' width='200' height='100'>" : 'N/A';
             },
         ],
         'description' => [
-            'title'    => '描述',
+            'title'    => 'Description',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return $value ? "<p style='width:250px'>$value</p>" : 'N/A';
             },
         ],
         'order' => [
-            'title'    => '排序（按小到大排序）',
+            'title'    => 'sort order',
             'sortable' => false,
         ],
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operation',
             'output' => function ($value, $model) {
                 return $value;
             },
@@ -61,32 +61,32 @@ return [
     ],
     'edit_fields' => [
         'position' => [
-            'title' => '位置',
+            'title' => 'Position',
             'type'     => 'enum',
             'options'  => [
-                'website_top' => '友站',
-                'footer-sponsor'  => '页脚赞助商',
-                'sidebar-sponsor'  => '右边栏赞助商',
-                'sidebar-resources'  => '右边栏资源推荐',
+                'website_top' => 'WebsiteTop',
+                'footer-sponsor'  => 'FooterSponsor',
+                'sidebar-sponsor'  => 'sidebar-sponsor',
+                'sidebar-resources'  => 'sidebar-resources',
             ],
         ],
         'title' => [
-            'title' => '标题',
+            'title' => 'Title',
         ],
         'target' => [
-            'title'    => '打开方式',
+            'title'    => 'Target',
             'type'     => 'enum',
             'options'  => [
-                '_blank' => '新窗口打开',
-                '_self'  => '本站打开',
+                '_blank' => 'Position',
+                '_self'  => 'Self',
             ],
             'value' => '_blank',
         ],
         'link' => [
-            'title' => '链接地址',
+            'title' => 'Link',
         ],
         'image_url' => [
-            'title'             => '封面',
+            'title'             => 'Cover',
             'type'              => 'image',
             'location'          => public_path() . '/uploads/banners/',
             'naming'            => 'random',
@@ -95,11 +95,11 @@ return [
             'display_raw_value' => false,
         ],
         'description' => [
-            'title' => '描述',
+            'title' => 'Description',
             'type'  => 'textarea',
         ],
         'order' => [
-            'title' => '排序（按小到大排序）',
+            'title' => 'sort order',
             'type'  => 'number',
             'value' => 0,
         ],
@@ -109,13 +109,13 @@ return [
             'title' => 'ID',
         ],
         'position' => [
-            'title' => '位置',
+            'title' => 'Position',
         ],
         'title' => [
-            'title' => '标题',
+            'title' => 'Title',
         ],
         'order' => [
-            'title' => '排序（按小到大排序）',
+            'title' => 'sort order',
             'type'  => 'number',
         ],
     ],

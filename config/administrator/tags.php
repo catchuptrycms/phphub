@@ -3,9 +3,9 @@
 use App\Models\Tag;
 
 return [
-    'title'   => '标签',
-    'heading' => '标签',
-    'single'  => '标签',
+    'title'   => 'Tags',
+    'heading' => 'Tags',
+    'single'  => 'Tags',
     'model'   => Tag::class,
 
     'columns' => [
@@ -13,7 +13,7 @@ return [
             'title' => 'ID',
         ],
         'name' => [
-            'title'    => '名称',
+            'title'    => 'Name',
             'sortable' => false,
         ],
         'slug' => [
@@ -21,19 +21,19 @@ return [
             'sortable' => false,
         ],
         'description' => [
-            'title'    => '描述',
+            'title'    => 'Description',
             'sortable' => false,
         ],
         'depth' => [
-            'title'    => '标签层次（0 最大）',
+            'title'    => 'Depth',
             'sortable' => false,
         ],
         'count' => [
-            'title'    => '打过标签的内容数量',
+            'title'    => 'count',
             'sortable' => false,
         ],
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operation',
             'output' => function ($value, $model) {
                 return $value;
             },
@@ -42,21 +42,21 @@ return [
     ],
     'edit_fields' => [
         'name' => [
-            'title' => '名称',
+            'title' => 'Name',
         ],
         'slug' => [
             'title' => 'Slug',
         ],
         'description' => [
-            'title' => '描述',
+            'title' => 'Description',
         ],
     ],
     'filters' => [
         'id' => [
-            'title' => '标签 ID',
+            'title' => 'Tags ID',
         ],
         'name' => [
-            'title' => '名称',
+            'title' => 'Name',
         ],
     ],
     'actions' => [],

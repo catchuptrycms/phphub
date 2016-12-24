@@ -154,6 +154,9 @@ class AuthController extends Controller implements UserCreatorListener
 
         Flash::success(lang('Login Successfully.'));
 
+        //dd(Auth::user()->id);
+        $currentUser = Auth::user();
+
         return redirect(route('users.edit', Auth::user()->id));
     }
 

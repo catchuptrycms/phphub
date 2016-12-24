@@ -3,9 +3,9 @@
 use App\Models\Topic;
 
 return [
-    'title'   => '话题',
-    'heading' => '话题',
-    'single'  => '话题',
+    'title'   => 'Topic',
+    'heading' => 'Topic',
+    'single'  => 'Topic',
     'model'   => Topic::class,
 
     'columns' => [
@@ -14,14 +14,14 @@ return [
             'title' => 'ID',
         ],
         'title' => [
-            'title'    => '话题',
+            'title'    => 'Topic',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return '<div style="max-width:260px">' .model_link($value, 'topics', $model->id). '</div>';
             },
         ],
         'user' => [
-            'title'    => '用户',
+            'title'    => 'user',
             'sortable' => false,
             'output'   => function ($value, $model) {
 
@@ -32,17 +32,17 @@ return [
             },
         ],
         'excerpt' => [
-            'title'    => '文摘',
+            'title'    => 'Excerpt',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return '<div style="max-width:320px">' .model_link($value, 'topics', $model->id). '</div>';
             },
         ],
         'order' => [
-            'title'    => '排序',
+            'title'    => 'Sort',
         ],
         'category' => [
-            'title'    => '分类',
+            'title'    => 'Categories',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return admin_link(
@@ -53,23 +53,23 @@ return [
             },
         ],
         'is_excellent' => [
-            'title'    => '推荐？',
+            'title'    => 'Excellent？',
         ],
         'is_blocked' => [
-            'title'    => '屏蔽？',
+            'title'    => 'Blocked？',
         ],
         'reply_count' => [
-            'title'    => '评论',
+            'title'    => 'Comment',
         ],
         'view_count' => [
-            'title'    => '查看',
+            'title'    => 'Views',
         ],
         'vote_count' => [
-            'title'    => '投票',
+            'title'    => 'Votes',
         ],
 
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operation',
             'output' => function ($value, $model) {
 
             },
@@ -78,11 +78,11 @@ return [
     ],
     'edit_fields' => [
         'title' => [
-            'title'    => '标题',
+            'title'    => 'Title',
             'sortable' => false,
         ],
         'user' => [
-            'title'              => '用户',
+            'title'              => 'user',
             'type'               => 'relationship',
             'name_field'         => 'name',
             'autocomplete'       => true,
@@ -90,54 +90,54 @@ return [
             'options_sort_field' => 'id',
         ],
         'category' => [
-            'title'              => '分类',
+            'title'              => 'Categories',
             'type'               => 'relationship',
             'name_field'         => 'name',
             'search_fields'      => array("CONCAT(id, ' ', name)"),
             'options_sort_field' => 'id',
         ],
         'body_original' => [
-            'title'    => 'Markdown 原始内容',
-            'hint'     => '请使用 Markdown 格式填写',
+            'title'    => 'Markdown Original Content',
+            'hint'     => 'Please use Markdown format',
             'type'     => 'textarea',
         ],
         'order' => [
-            'title'    => '排序',
+            'title'    => 'Sort',
         ],
         'is_excellent' => [
-            'title'    => '是否是推荐',
+            'title'    => 'Recommended',
             'type'     => 'enum',
             'options'  => [
-                'yes' => '是',
-                'no'  => '否',
+                'yes' => 'Yes',
+                'no'  => 'No',
             ],
             'value' => 'no',
         ],
         'is_blocked' => [
-            'title'    => '是否被屏蔽',
+            'title'    => 'is blocked',
             'type'     => 'enum',
             'options'  => [
-                'yes' => '是',
-                'no'  => '否',
+                'yes' => 'Yes',
+                'no'  => 'No',
             ],
             'value' => 'no',
         ],
         'reply_count' => [
-            'title'    => '评论',
+            'title'    => 'Comment',
         ],
         'view_count' => [
-            'title'    => '查看',
+            'title'    => 'Views',
         ],
         'vote_count' => [
-            'title'    => '投票',
+            'title'    => 'Votes',
         ],
     ],
     'filters' => [
         'id' => [
-            'title' => '内容 ID',
+            'title' => 'Content ID',
         ],
         'user' => [
-            'title'              => '用户',
+            'title'              => 'user',
             'type'               => 'relationship',
             'name_field'         => 'name',
             'autocomplete'       => true,
@@ -145,37 +145,37 @@ return [
             'options_sort_field' => 'id',
         ],
         'category' => [
-            'title'              => '分类',
+            'title'              => 'Categories',
             'type'               => 'relationship',
             'name_field'         => 'name',
             'search_fields'      => array("CONCAT(id, ' ', screen_name)"),
             'options_sort_field' => 'id',
         ],
         'body_original' => [
-            'title'    => 'Markdown 原始内容',
+            'title'    => 'Markdown Original Content',
         ],
         'order' => [
-            'title'    => '排序',
+            'title'    => 'Sort',
         ],
         'is_excellent' => [
-            'title'    => '是否是推荐',
+            'title'    => 'Recommended',
             'type'     => 'enum',
             'options'  => [
-                'yes' => '是',
-                'no'  => '否',
+                'yes' => 'Yes',
+                'no'  => 'No',
             ],
         ],
         'is_blocked' => [
-            'title'    => '是否被屏蔽',
+            'title'    => 'is blocked',
             'type'     => 'enum',
             'options'  => [
-                'yes' => '是',
-                'no'  => '否',
+                'yes' => 'Yes',
+                'no'  => 'No',
             ],
         ],
         'view_count' => [
             'type'                => 'number',
-            'title'               => '查看次数',
+            'title'               => 'ViewCount',
             'thousands_separator' => ',', //optional, defaults to ','
             'decimal_separator'   => '.',   //optional, defaults to '.'
         ],
@@ -184,6 +184,6 @@ return [
         'title' => 'required'
     ],
     'messages' => [
-        'title.required' => '请填写标题',
+        'title.required' => 'Required',
     ],
 ];

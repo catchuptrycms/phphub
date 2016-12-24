@@ -16,7 +16,7 @@
   <div class="main-col col-md-9 left-col">
 
   <ol class="breadcrumb">
-      <li><a href="{{ route('users.show', $user->id) }}">个人中心</a></li>
+      <li><a href="{{ route('users.show', $user->id) }}">Show User</a></li>
       <li class="active">Ta 发表的回复（{{ $user->reply_count }}）</li>
   </ol>
 

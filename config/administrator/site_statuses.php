@@ -2,9 +2,9 @@
 use App\Models\SiteStatus;
 
 return [
-    'title'   => '数据统计',
-    'heading' => '数据统计',
-    'single'  => '数据统计',
+    'title'   => 'Site Statuses',
+    'heading' => 'Site Statuses',
+    'single'  => 'Site Statuses',
     'model'   => SiteStatus::class,
 
     'permission' => function () {
@@ -32,41 +32,41 @@ return [
             'title' => 'ID',
         ],
         'day' => [
-            'title'    => '日期',
+            'title'    => 'day',
             'sortable' => false,
         ],
         'register_count' => [
-            'title'    => '注册用户数',
+            'title'    => 'register count',
         ],
         'github_regitster_count' => [
-            'title'    => 'Github 注册数',
+            'title'    => 'Github Count',
         ],
         'wechat_registered_count' => [
-            'title'    => 'WeChat 注册数',
+            'title'    => 'WeChat count',
         ],
         'topic_count' => [
-            'title'    => '话题数量',
+            'title'    => 'topic count',
         ],
         'reply_count' => [
-            'title'    => '回复数量',
+            'title'    => 'reply count',
         ],
         'image_count' => [
-            'title'    => '图片数量',
+            'title'    => 'image count',
         ],
         'operation' => [
-            'title'    => '管理',
+            'title'    => 'Operation',
             'sortable' => false,
         ],
     ],
 
     'edit_fields' => [
         'day' => [
-            'title' => '日期',
+            'title' => 'day',
         ],
     ],
     'filters' => [
         'day' => [
-            'title' => '日期',
+            'title' => 'filters',
         ],
     ],
 ];

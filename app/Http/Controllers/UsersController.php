@@ -16,8 +16,11 @@ use Phphub\Handler\Exception\ImageUploadException;
 
 class UsersController extends Controller
 {
+    var $currentUser = 0;
+
     public function __construct()
     {
+        $this->currentUser = Auth::user();
         $this->middleware('auth', [
             'only' => [
                 'edit', 'update', 'destroy',
@@ -29,25 +32,28 @@ class UsersController extends Controller
 
     public function index()
     {
+        $currentUser = $this->currentUser;
         $users = User::recent()->take(48)->get();
 
-        return view('users.index', compact('users'));
+        return view('users.index', compact('users', 'currentUser'));
     }
 
     public function show($id)
     {
+        $currentUser = $this->currentUser;
         $user    = User::findOrFail($id);
         $topics  = Topic::whose($user->id)->withoutBoardTopics()->recent()->limit(20)->get();
         $replies = Reply::whose($user->id)->recent()->limit(20)->get();
-        return view('users.show', compact('user', 'topics', 'replies'));
+        return view('users.show', compact('user', 'topics', 'replies', 'currentUser'));
     }
 
     public function edit($id)
     {
+        $currentUser = $this->currentUser;
         $user = User::findOrFail($id);
         $this->authorize('update', $user);
 
-        return view('users.edit', compact('user', 'topics', 'replies'));
+        return view('users.edit', compact('user', 'topics', 'replies', 'currentUser'));
     }
 
     public function update($id, UpdateUserRequest $request)
@@ -70,42 +76,47 @@ class UsersController extends Controller
 
     public function replies($id)
     {
+        $currentUser = $this->currentUser;
         $user    = User::findOrFail($id);
         $replies = Reply::whose($user->id)->recent()->paginate(15);
 
-        return view('users.replies', compact('user', 'replies'));
+        return view('users.replies', compact('user', 'replies', 'currentUser'));
     }
 
     public function topics($id)
     {
+        $currentUser = $this->currentUser;
         $user   = User::findOrFail($id);
         $topics = Topic::whose($user->id)->withoutBoardTopics()->recent()->paginate(15);
 
-        return view('users.topics', compact('user', 'topics'));
+        return view('users.topics', compact('user', 'topics', 'currentUser'));
     }
 
     public function votes($id)
     {
+        $currentUser = $this->currentUser;
         $user   = User::findOrFail($id);
         $topics = $user->votedTopics()->orderBy('pivot_created_at', 'desc')->paginate(15);
 
-        return view('users.votes', compact('user', 'topics'));
+        return view('users.votes', compact('user', 'topics', 'currentUser'));
     }
 
     public function following($id)
     {
+        $currentUser = $this->currentUser;
         $user  = User::findOrFail($id);
         $users = $user->followings()->orderBy('id', 'desc')->paginate(15);
 
-        return view('users.following', compact('user', 'users'));
+        return view('users.following', compact('user', 'users', 'currentUser'));
     }
 
     public function followers($id)
     {
+        $currentUser = $this->currentUser;
         $user  = User::findOrFail($id);
         $users = $user->followers()->orderBy('id', 'desc')->paginate(15);
 
-        return view('users.followers', compact('user', 'users'));
+        return view('users.followers', compact('user', 'users', 'currentUser'));
     }
 
     public function accessTokens($id)
@@ -121,9 +132,10 @@ class UsersController extends Controller
             ->with('token')
             ->lists('id') ?: [];
 
+        $currentUser = $this->currentUser;
         $tokens = AccessToken::whereIn('session_id', $sessions)->get();
 
-        return view('users.access_tokens', compact('user', 'tokens'));
+        return view('users.access_tokens', compact('user', 'tokens', 'currentUser'));
     }
 
     public function revokeAccessToken($token)
@@ -155,10 +167,11 @@ class UsersController extends Controller
 
     public function editEmailNotify($id)
     {
+        $currentUser = $this->currentUser;
         $user = User::findOrFail($id);
         $this->authorize('update', $user);
 
-        return view('users.edit_email_notify', compact('user'));
+        return view('users.edit_email_notify', compact('user', 'currentUser'));
     }
 
     public function updateEmailNotify($id, Request $request)
@@ -221,10 +234,11 @@ class UsersController extends Controller
 
     public function editAvatar($id)
     {
+        $currentUser = $this->currentUser;
         $user = User::findOrFail($id);
         $this->authorize('update', $user);
 
-        return view('users.edit_avatar', compact('user'));
+        return view('users.edit_avatar', compact('user', 'currentUser'));
     }
 
     public function updateAvatar($id, Request $request)
@@ -269,6 +283,7 @@ class UsersController extends Controller
 
     public function editSocialBinding($id)
     {
+        $currentUser = $this->currentUser;
         $user = User::findOrFail($id);
         $this->authorize('update', $user);
 

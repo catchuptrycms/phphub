@@ -53,7 +53,7 @@
             </a>
             <span> ⋅  </span>
           @endif
-          <a class="fa fa-reply" href="javascript:void(0)" onclick="replyOne('{{{$reply->user->name}}}');" title="回复 {{{$reply->user->name}}}"></a>
+          <a class="fa fa-reply" href="javascript:void(0)" onclick="replyOne('{{{$reply->user->name}}}');" title="Replies {{{$reply->user->name}}}"></a>
         </span>
 
         <div class="meta">

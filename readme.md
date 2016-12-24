@@ -71,6 +71,13 @@ If you do not want to develop front-end style, you do not need to configure the 
 
 Direct nodejs network [https://nodejs.org/en/] (http: //nodejs.org/en/) download and install the latest version.
 
+`` `
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+npm install -g npm-windows-upgrade
+npm-windows-upgrade
+`` `
+
+
 2) Install Gulp
 
 `` `Shell
@@ -92,7 +99,7 @@ gulp
 5). Monitor changes and compile automatically
 
 `` `Shell
-Gulp watch
+gulp watch
 `` `
 
 ### Link entry

@@ -1,4 +1,9 @@
 @extends('layouts.default')
+<?php
+$currentUser = Auth::user();
+?>
+
+
 
 @section('title')
 {{{ $topic->title }}}_@parent

@@ -57,11 +57,11 @@
             </div>
             <div class="col-xs-4">
                 <a class="counter" href="{{ route('users.replies', $user->id) }}">{{ $user->reply_count }}</a>
-                <a class="text" href="{{ route('users.replies', $user->id) }}">评论</a>
+                <a class="text" href="{{ route('users.replies', $user->id) }}">Comment</a>
             </div>
             <div class="col-xs-4">
                 <a class="counter" href="{{ route('users.topics', $user->id) }}">{{ $user->topic_count }}</a>
-                <a class="text" href="{{ route('users.topics', $user->id) }}">话题</a>
+                <a class="text" href="{{ route('users.topics', $user->id) }}">Topic</a>
             </div>
         </div>
 

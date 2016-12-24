@@ -36,8 +36,8 @@ return [
     |
     */
 
-    'url'         => env('APP_URL'),
-    'url_static'  => env('URL_STATIC'),
+    'url' => env('APP_URL'),
+    'url_static' => env('URL_STATIC'),
     'user_static' => env('USER_STATIC'),
 
     /*
@@ -51,10 +51,10 @@ return [
     |
     */
 
-    'timezone' => env('TIMEZONE') ? :'UTC',
+    'timezone' => env('TIMEZONE') ?: 'UTC',
 
-    'wiki_topic_id' => env('WIKI_TOPIC_ID') ?:1,
-    'admin_board_cid' => env('ADMIN_BOARD_CID') ?:0,
+    'wiki_topic_id' => env('WIKI_TOPIC_ID') ?: 1,
+    'admin_board_cid' => env('ADMIN_BOARD_CID') ?: 0,
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'locale' => env('LOCALE') ? :'en',
+    'locale' => env('LOCALE') ?: 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -173,7 +173,7 @@ return [
         Frozennode\Administrator\AdministratorServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         Thujohn\Rss\RssServiceProvider::class,
-		    //Conner\Tagging\Providers\TaggingServiceProvider::class,
+        //Conner\Tagging\Providers\TaggingServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
         Phphub\Sitemap\SitemapServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
@@ -208,52 +208,52 @@ return [
 
     'aliases' => [
 
-        'App'       => Illuminate\Support\Facades\App::class,
-        'Artisan'   => Illuminate\Support\Facades\Artisan::class,
-        'Auth'      => Illuminate\Support\Facades\Auth::class,
-        'Blade'     => Illuminate\Support\Facades\Blade::class,
-        'Bus'       => Illuminate\Support\Facades\Bus::class,
-        'Cache'     => Illuminate\Support\Facades\Cache::class,
-        'Config'    => Illuminate\Support\Facades\Config::class,
-        'Cookie'    => Illuminate\Support\Facades\Cookie::class,
-        'Crypt'     => Illuminate\Support\Facades\Crypt::class,
-        'DB'        => Illuminate\Support\Facades\DB::class,
-        'Eloquent'  => Illuminate\Database\Eloquent\Model::class,
-        'Event'     => Illuminate\Support\Facades\Event::class,
-        'File'      => Illuminate\Support\Facades\File::class,
-        'Gate'      => Illuminate\Support\Facades\Gate::class,
-        'Hash'      => Illuminate\Support\Facades\Hash::class,
-        'Input'     => Illuminate\Support\Facades\Input::class,
-        'Lang'      => Illuminate\Support\Facades\Lang::class,
-        'Log'       => Illuminate\Support\Facades\Log::class,
-        'Mail'      => Illuminate\Support\Facades\Mail::class,
-        'Password'  => Illuminate\Support\Facades\Password::class,
-        'Queue'     => Illuminate\Support\Facades\Queue::class,
-        'Redirect'  => Illuminate\Support\Facades\Redirect::class,
-        'Redis'     => Illuminate\Support\Facades\Redis::class,
-        'Request'   => Illuminate\Support\Facades\Request::class,
-        'Response'  => Illuminate\Support\Facades\Response::class,
-        'Route'     => Illuminate\Support\Facades\Route::class,
-        'Schema'    => Illuminate\Support\Facades\Schema::class,
-        'Session'   => Illuminate\Support\Facades\Session::class,
-        'Storage'   => Illuminate\Support\Facades\Storage::class,
-        'URL'       => Illuminate\Support\Facades\URL::class,
-        'Validator' => Illuminate\Support\Facades\Validator::class,
-        'View'      => Illuminate\Support\Facades\View::class,
+    'App' => Illuminate\Support\Facades\App::class,
+    'Artisan' => Illuminate\Support\Facades\Artisan::class,
+    'Auth' => Illuminate\Support\Facades\Auth::class,
+    'Blade' => Illuminate\Support\Facades\Blade::class,
+    'Bus' => Illuminate\Support\Facades\Bus::class,
+    'Cache' => Illuminate\Support\Facades\Cache::class,
+    'Config' => Illuminate\Support\Facades\Config::class,
+    'Cookie' => Illuminate\Support\Facades\Cookie::class,
+    'Crypt' => Illuminate\Support\Facades\Crypt::class,
+    'DB' => Illuminate\Support\Facades\DB::class,
+    'Eloquent' => Illuminate\Database\Eloquent\Model::class,
+    'Event' => Illuminate\Support\Facades\Event::class,
+    'File' => Illuminate\Support\Facades\File::class,
+    'Gate' => Illuminate\Support\Facades\Gate::class,
+    'Hash' => Illuminate\Support\Facades\Hash::class,
+    'Input' => Illuminate\Support\Facades\Input::class,
+    'Lang' => Illuminate\Support\Facades\Lang::class,
+    'Log' => Illuminate\Support\Facades\Log::class,
+    'Mail' => Illuminate\Support\Facades\Mail::class,
+    'Password' => Illuminate\Support\Facades\Password::class,
+    'Queue' => Illuminate\Support\Facades\Queue::class,
+    'Redirect' => Illuminate\Support\Facades\Redirect::class,
+    'Redis' => Illuminate\Support\Facades\Redis::class,
+    'Request' => Illuminate\Support\Facades\Request::class,
+    'Response' => Illuminate\Support\Facades\Response::class,
+    'Route' => Illuminate\Support\Facades\Route::class,
+    'Schema' => Illuminate\Support\Facades\Schema::class,
+    'Session' => Illuminate\Support\Facades\Session::class,
+    'Storage' => Illuminate\Support\Facades\Storage::class,
+    'URL' => Illuminate\Support\Facades\URL::class,
+    'Validator' => Illuminate\Support\Facades\Validator::class,
+    'View' => Illuminate\Support\Facades\View::class,
 
-        'Purifier'  => Mews\Purifier\Facades\Purifier::class,
-        'Image'     => Intervention\Image\Facades\Image::class,
-        'Rss'       => Thujohn\Rss\RssFacade::class,
-        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    'Purifier' => Mews\Purifier\Facades\Purifier::class,
+    'Image' => Intervention\Image\Facades\Image::class,
+    'Rss' => Thujohn\Rss\RssFacade::class,
+    'Entrust' => Zizaco\Entrust\EntrustFacade::class,
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
-        'Flash'            => Laracasts\Flash\Flash::class,
-        'QrCode'           => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
-        'Rss'              => Thujohn\Rss\RssFacade::class,
-        'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
+    'Flash' => Laracasts\Flash\Flash::class,
+    'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+    'Rss' => Thujohn\Rss\RssFacade::class,
+    'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
 
-        // API
-        'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
-    ],
+    // API
+    'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
+],
 
 ];

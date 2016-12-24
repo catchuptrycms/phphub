@@ -21,7 +21,7 @@
 
         @include('sites.partials.sites', ['heading_title' => '<i class="fa fa-cloud text-md"></i> 开发者服务推荐', 'filterd_sites' => $sites['dev_service']])
 
-        @include('sites.partials.sites', ['heading_title' => '<i class="fa fa-cloud text-md"></i> 国外网站', 'filterd_sites' => $sites['site_foreign']])
+        @include('sites.partials.sites', ['heading_title' => '<i class="fa fa-cloud text-md"></i> Foreign Site', 'filterd_sites' => $sites['site_foreign']])
 
     </div>
 

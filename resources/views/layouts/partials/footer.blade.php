@@ -1,3 +1,10 @@
+<?php
+/*$siteStat = array();
+$siteStat->user_count = 0;
+$siteStat->topic_count = 0;
+$siteStat->reply_count = 0;*/
+?>
+
 <footer class="footer">
       <div class="container">
         <div class="row footer-top">
@@ -36,9 +43,9 @@
                   <div class="col-sm-4">
                     <h4>{{ lang('Site Status') }}</h4>
                     <ul class="list-unstyled">
-                        <li>{{ lang('Total User') }}: {{ $siteStat->user_count }} </li>
-                        <li>{{ lang('Total Topic') }}: {{ $siteStat->topic_count }} </li>
-                        <li>{{ lang('Total Reply') }}: {{ $siteStat->reply_count }} </li>
+                        <li>users</li>
+                        <li>topic_count</li>
+                        <li>reply_count</li>
                     </ul>
                   </div>
                   <div class="col-sm-4">

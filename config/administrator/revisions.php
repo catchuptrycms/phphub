@@ -3,9 +3,9 @@
 use App\Models\Revision;
 
 return [
-    'title'   => '操作记录',
-    'heading' => '操作记录',
-    'single'  => '操作记录',
+    'title'   => 'Revisions',
+    'heading' => 'Revisions',
+    'single'  => 'Revisions',
     'model'   => Revision::class,
 
     'action_permissions' => [
