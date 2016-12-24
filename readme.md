@@ -52,7 +52,7 @@ Homestead provision
 Inside the virtual machine:
 
 `` `Shell
-php artisan est: install
+php artisan est:install
 `` `
 
 > For more information, see ESTInstallCommand

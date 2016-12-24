@@ -34,9 +34,9 @@ class CreateOauthClientEndpointsTable extends Migration
 
             $table->timestamps();
 
-            $table->unique(['client_id', 'redirect_uri']);
+            $table->unique(['client_id'], 'unique_client_id');
 
-            $table->foreign('client_id')
+            $table->foreign('client_id', 'fk_oauth_client')
                 ->references('id')->on('oauth_clients')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');

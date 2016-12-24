@@ -25,12 +25,14 @@ class ESTInitRBAC extends BaseCommand
             $this->error("Users table is empty");
             return;
         }
-        $founder     = Role::addRole('Founder', 'Founder');
-        $maintainer  = Role::addRole('Maintainer', 'Maintainer');
+        $founder = Role::addRole('Founder', 'Founder');
+        $administrator = Role::addRole('Administrator', 'Administrator');
+        $moderator = Role::addRole('Moderator', 'Moderator');
+        $maintainer = Role::addRole('Maintainer', 'Maintainer');
         $contributor = Role::addRole('Contributor', 'Contributor');
 
-        $visit_admin   = Permission::addPermission('visit_admin', 'Visit Admin');
-        $manage_users  = Permission::addPermission('manage_users', 'Manage Users');
+        $visit_admin = Permission::addPermission('visit_admin', 'Visit Admin');
+        $manage_users = Permission::addPermission('manage_users', 'Manage Users');
         $manage_topics = Permission::addPermission('manage_topics', 'Manage Topics');
         $compose_announcement = Permission::addPermission('compose_announcement', 'Composing Announcement');
 
@@ -41,11 +43,32 @@ class ESTInitRBAC extends BaseCommand
             $compose_announcement,
         ]);
 
+        $this->attachPermissions($administrator, [
+            $visit_admin,
+            $manage_topics,
+            $compose_announcement,
+        ]);
+
+        $this->attachPermissions($moderator, [
+            $visit_admin,
+            $manage_topics,
+            $compose_announcement,
+        ]);
+
+
         $this->attachPermissions($maintainer, [
             $visit_admin,
             $manage_topics,
             $compose_announcement,
         ]);
+
+
+        $this->attachPermissions($contributor, [
+            $visit_admin,
+            $manage_topics,
+            $compose_announcement,
+        ]);
+
 
         if (!$user->hasRole($founder->name)) {
             $user->attachRole($founder);
@@ -57,7 +80,7 @@ class ESTInitRBAC extends BaseCommand
     }
 
     /**
-     * @param Role         $role
+     * @param Role $role
      * @param Permission[] $permissions
      */
     public function attachPermissions(Role $role, array $permissions)
