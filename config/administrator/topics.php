@@ -28,7 +28,7 @@ return [
                 $avatar = $model->user->present()->gravatar();
                 $value = empty($avatar) ? 'N/A' : '<img src="'.$avatar.'" style="height:44px;width:44px"> ' . $model->user->name;
 
-                return model_link($value, 'users', $model->id);
+                return model_link($value, 'users', $model->user->id);
             },
         ],
         'excerpt' => [
@@ -69,7 +69,7 @@ return [
         ],
 
         'operation' => [
-            'title'  => 'Operation',
+            'title'  => 'Actions',
             'output' => function ($value, $model) {
 
             },
@@ -114,7 +114,7 @@ return [
             'value' => 'no',
         ],
         'is_blocked' => [
-            'title'    => 'is blocked',
+            'title'    => 'Blocked',
             'type'     => 'enum',
             'options'  => [
                 'yes' => 'Yes',
@@ -166,7 +166,7 @@ return [
             ],
         ],
         'is_blocked' => [
-            'title'    => 'is blocked',
+            'title'    => 'Blocked',
             'type'     => 'enum',
             'options'  => [
                 'yes' => 'Yes',

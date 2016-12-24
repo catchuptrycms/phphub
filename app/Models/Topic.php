@@ -124,14 +124,25 @@ class Topic extends Model
 
     public function getSameCategoryTopics()
     {
-        $data = Cache::remember('phphub_hot_topics', 30, function(){
-            return Topic::where('category_id', '=', $this->category_id)
-                            ->recent()
-                            ->with('user')
+        $SameCategoryTopics = Topic::where('category_id', '=', $this->category_id)
+            ->recent()
+            ->with('user')
+            ->take(7)
+            ->get();
+
+
+        /*$data = Cache::remember('phphub_hot_topics', 30, function(){
+            /*$SameCategoryTopics = Topic::where('category_id', '=', $this->category_id)
+                            //->with('user')
                             ->take(3)
-                            ->get();
-        });
-        return $data;
+                            ->get();*   /
+            return $temp;
+        });*/
+
+
+        //dd($temp);
+
+        return $SameCategoryTopics;
     }
 
     public static function makeExcerpt($body)

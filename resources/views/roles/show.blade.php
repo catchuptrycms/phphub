@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title')
-PHPHub 名人堂 @parent
+PHPHub Hall of Fame @parent
 @stop
 
 @section('content')
@@ -74,7 +74,7 @@ PHPHub 名人堂 @parent
                   @endif
 
                   @if ($user->linkedin)
-                  <li class="popover-with-html" data-content="点击查看 LinkedIn 个人资料">
+                  <li class="popover-with-html" data-content="View LinkedIn Profile">
                     <a href="{{ $user->linkedin }}" rel="nofollow" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i>
                     </a>
                 </li>

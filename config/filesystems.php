@@ -50,7 +50,7 @@ return [
 
         'backup' => [
             'driver' => 'local',
-            'root'   => env('BACKUP_DISK', storage_path('app')),
+            'root'   => storage_path('app'),
         ],
 
         'ftp' => [

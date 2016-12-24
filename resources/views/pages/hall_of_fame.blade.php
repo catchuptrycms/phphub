@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title')
-Laravel China 名人堂 @parent
+Laravel China Hall of Fame @parent
 @stop
 
 @section('content')
@@ -9,7 +9,7 @@ Laravel China 名人堂 @parent
 <div class="hall_of_fames">
 
     <div class="box text-center site-intro rm-link-color">
-        Laravel China 名人堂，用于推荐对 Laravel China 社区有突出贡献的用户。<a style="text-decoration: underline;" href="https://laravel-china.org/topics/2440">更多信息</a>
+        <a style="text-decoration: underline;" href="https://laravel-china.org/topics/2440">More info</a>
     </div>
 
     @foreach($users as $index => $user)
@@ -74,7 +74,7 @@ Laravel China 名人堂 @parent
                   @endif
 
                   @if ($user->linkedin)
-                  <li class="popover-with-html" data-content="点击查看 LinkedIn 个人资料">
+                  <li class="popover-with-html" data-content="View LinkedIn Profile">
                     <a href="{{ $user->linkedin }}" rel="nofollow" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i>
                     </a>
                 </li>

@@ -8,7 +8,7 @@
               <div class="image">
 
                   @if ($currentUser && $currentUser->id == $user->id)
-                  <a href="{{ route('users.edit_avatar', $user->id) }}" class="popover-with-html" data-content="修改头像">
+                  <a href="{{ route('users.edit_avatar', $user->id) }}" class="popover-with-html" data-content="Avatar">
                       <img class="media-object avatar-112 avatar img-thumbnail" src="{{ $user->present()->gravatar(200) }}">
                   </a>
                   @else
@@ -31,15 +31,15 @@
                 {{ $user->real_name }}
               </div>
               <div class="item">
-                第 {{ $user->id }} 位会员
+                ID {{ $user->id }} Membership
               </div>
               <div class="item number">
-                注册于 <span class="timeago">{{ $user->created_at }}</span>
+                Registered <span class="timeago">{{ $user->created_at }}</span>
               </div>
 
               @if($user->last_actived_at)
               <div class="item number">
-                活跃于 <span class="timeago">{{ $user->last_actived_at }}</span>
+                Last Active <span class="timeago">{{ $user->last_actived_at }}</span>
               </div>
               @endif
 
@@ -53,7 +53,7 @@
         <div class="follow-info row">
             <div class="col-xs-4">
               <a class="counter" href="{{ route('users.followers', $user->id) }}">{{ $user->follower_count }}</a>
-              <a class="text" href="{{ route('users.followers', $user->id) }}">关注者</a>
+              <a class="text" href="{{ route('users.followers', $user->id) }}">Followers</a>
             </div>
             <div class="col-xs-4">
                 <a class="counter" href="{{ route('users.replies', $user->id) }}">{{ $user->reply_count }}</a>
@@ -99,7 +99,7 @@
               @endif
 
               @if ($user->linkedin)
-              <li class="popover-with-html" data-content="点击查看 LinkedIn 个人资料">
+              <li class="popover-with-html" data-content="View LinkedIn Profile">
                 <a href="{{ $user->linkedin }}" rel="nofollow" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn
                 </a>
             </li>
@@ -148,7 +148,7 @@
             <i class="fa fa-times"></i> {{ $user->is_banned == 'yes' ? lang('Unblock User') : lang('Block User') }}
           </a>
           <a class="btn btn-info btn-block" href="{{ url('admin/users/' . $user->id) }}" >
-            <i class="fa fa-eye"></i> 后台管理
+            <i class="fa fa-eye"></i>Backend Mgmt
           </a>
         @endif
 

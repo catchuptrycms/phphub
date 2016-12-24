@@ -64,7 +64,7 @@
   @endif
 
   @if ($topic->user->linkedin)
-  <li class="popover-with-html" data-content="点击查看 LinkedIn 个人资料">
+  <li class="popover-with-html" data-content="View LinkedIn Profile">
     <a href="{{ $topic->user->linkedin }}" rel="nofollow" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn
     </a>
   </li>

@@ -32,11 +32,12 @@ class TopicsController extends Controller implements CreatorListener
         $topics = $topic->getTopicsWithFilter($request->get('filter'), 40);
         $links  = Link::allFromCache();
         $banners = Banner::allByPosition();
+        //'links', 'banners'
 
         $active_users = ActiveUser::fetchAll();
         $hot_topics = HotTopic::fetchAll();
 
-        return view('topics.index', compact('topics', 'links', 'banners', 'active_users', 'hot_topics'));
+        return view('topics.index', compact('topics', 'active_users', 'hot_topics'));
     }
 
     public function create(Request $request)

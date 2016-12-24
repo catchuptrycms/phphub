@@ -69,11 +69,11 @@ return [
     ],
     'actions' => [
         'disable_link' => [
-            'title'    => '禁用',
+            'title'    => 'Disabled',
             'messages' => array(
-                'active'  => '正在处理...',
-                'success' => '处理成功',
-                'error'   => '处理失败，请重新尝试',
+                'active'  => 'Processing...',
+                'success' => 'Success',
+                'error'   => 'Whoops!',
             ),
             'permission' => function ($model) {
                 return $model->is_enabled == 'yes';
@@ -84,11 +84,11 @@ return [
             }
         ],
         'enable_link' => [
-            'title'    => '启用',
+            'title'    => 'Enabled',
             'messages' => array(
-                'active'  => '正在处理...',
-                'success' => '处理成功',
-                'error'   => '处理失败，请重新尝试',
+                'active'  => 'Processing...',
+                'success' => 'Success',
+                'error'   => 'Whoops!',
             ),
             'permission' => function ($model) {
                 return $model->is_enabled == 'no';
