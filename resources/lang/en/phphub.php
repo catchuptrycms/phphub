@@ -13,7 +13,7 @@ return [
     'Logout' => 'Logout',
     'New Topic' => 'New Topic',
     'Links' => 'Links',
-    'Same Category Topics' => 'Same Category Topics',
+    'Topics in the same category' => 'Topics in the same category',
     'Tips and Tricks' => 'Tips and Tricks',
     'Site Status' => 'Site Status',
     'Total User' => 'Total User',

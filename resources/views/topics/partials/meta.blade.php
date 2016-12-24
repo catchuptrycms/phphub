@@ -26,8 +26,8 @@
 @if ($topic->source && in_array($topic->source, ['iOS', 'Android']))
 ⋅
 via
-    <a href="https://laravel-china.org/topics/1531" target="_blank" class="popover-with-html" data-content="来自手机客户端">
-      <i class="text-md fa fa-{{ $topic->source == 'iOS' ? 'apple' : 'android' }}" aria-hidden="true"></i> {{ $topic->source == 'iOS' ? 'iOS 客户端' : '安卓客户端' }}
+    <a href="https://laravel-china.org/topics/1531" target="_blank" class="popover-with-html" data-content="Mobile">
+      <i class="text-md fa fa-{{ $topic->source == 'iOS' ? 'apple' : 'android' }}" aria-hidden="true"></i> {{ $topic->source == 'iOS' ? 'iOS Client' : 'Android' }}
     </a>
 
 @endif

@@ -8,7 +8,7 @@ Route::get('/wiki', 'PagesController@wiki')->name('wiki');
 Route::get('/sitemap', 'PagesController@sitemap');
 Route::get('/sitemap.xml', 'PagesController@sitemap');
 Route::get('/sitemap', 'PagesController@sitemap');
-Route::get('/hall_of_fames', 'PagesController@hallOfFames')->name('hall_of_fames');
+Route::get('/hall_of_fame', 'PagesController@hallOfFames')->name('hall_of_fame');
 
 Route::get('/roles/{id}', 'RolesController@show')->name('roles.show');
 

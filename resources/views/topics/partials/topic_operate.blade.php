@@ -29,7 +29,7 @@
     @endif
 
     @if ( $currentUser && ($manage_topics || $currentUser->id == $topic->user_id) )
-      <a id="topic-append-button" href="javascript:void(0);" class="admin  popover-with-html" data-toggle="modal" data-target="#exampleModal" data-content="帖子附言，添加附言后所有参与讨论的用户都能收到消息提醒，包括点赞和评论的用户">
+      <a id="topic-append-button" href="javascript:void(0);" class="admin  popover-with-html" data-toggle="modal" data-target="#exampleModal" data-content="Posts with postscript, add postscript after all the users involved in the discussion can receive a message to remind, including the point of praise and comments of the user">
         <i class="fa fa-plus"></i>
       </a>
 

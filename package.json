@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "gulp": "^3.8.7",
-    "laravel-elixir": "^4.0.0",
+    "laravel-elixir": "^5.0.0",
     "laravel-elixir-compress": "^1.0.2",
     "laravel-elixir-livereload": "^1.1.4"
   },
@@ -14,7 +14,7 @@
     "social-share.js": "^1.0"
   },
   "name": "phphub5",
-  "description": "* 产品名称：PHPHub5 * 项目代码：PHPHub5 * 官方地址：https://laravel-china.org/",
+  "description": "",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "repository": {
