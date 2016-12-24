@@ -6,8 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "^5.1",
-        "zizaco/entrust": "^1.7",
+        "laravel/framework": "5.1.*",
         "league/html-to-markdown": "^4.2",
         "erusev/parsedown": "^1.6",
         "mews/purifier": "~2.0",
@@ -16,6 +15,7 @@
         "roumen/sitemap": "^2.6",
         "laracasts/flash": "^2.0",
         "rap2hpoutre/laravel-log-viewer": "^0.7.0",
+        "zizaco/entrust": "^1.7",
         "devster/ubench": "^1.2",
         "orangehill/iseed": "^2.1",
         "predis/predis": "^1.1",
@@ -37,8 +37,7 @@
         "lucadegasperi/oauth2-server-laravel": "~5.0",
         "jpush/jpush": "^3.2",
         "socialiteproviders/manager": "2.1.5",
-        "pda/pheanstalk": "^3.1",
-        "overtrue/laravel-follow": "^1.0"
+        "pda/pheanstalk": "^3.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
