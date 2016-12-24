@@ -52,7 +52,7 @@ Homestead provision
 Inside the virtual machine:
 
 `` `Shell
-Php artisan est: install
+php artisan est: install
 `` `
 
 > For more information, see ESTInstallCommand
@@ -69,24 +69,24 @@ If you do not want to develop front-end style, you do not need to configure the 
 
 1). Install node.js
 
-Direct Quguan network [https://nodejs.org/en/] (http: //nodejs.org/en/) download and install the latest version.
+Direct nodejs network [https://nodejs.org/en/] (http: //nodejs.org/en/) download and install the latest version.
 
 2) Install Gulp
 
 `` `Shell
-Npm install --global gulp
+npm install --global gulp
 `` `
 
 3) Install Laravel Elixir
 
 `` `Shell
-Npm install
+npm install
 `` `
 
 4). Direct Gulp compiler front-end content
 
 `` `Shell
-Gulp
+gulp
 `` `
 
 5). Monitor changes and compile automatically
@@ -98,9 +98,9 @@ Gulp watch
 ### Link entry
 
 * Home Address: http: //phphub5.app/
-* Administrative background: http://phphub5.app/admin
+* Administrative backend: http://phphub5.app/admin
 
-In the development environment, direct access to the background address to log on to No. 1 user.
+In the development environment, direct access to the backend address to log on to No. 1 user.
 
 At this point, the installation is complete.
 

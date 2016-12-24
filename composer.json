@@ -4,6 +4,7 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "^5.2",
@@ -16,6 +17,8 @@
         "laracasts/flash": "^2.0",
         "rap2hpoutre/laravel-log-viewer": "^0.7.0",
         "zizaco/entrust": "5.2.x-dev",
+        "acoustep/entrust-gui": "5.2.x-dev",
+		    "yajra/laravel-datatables-oracle": "^6.0",
         "devster/ubench": "^1.2",
         "orangehill/iseed": "^2.1",
         "predis/predis": "^1.1",
@@ -40,13 +43,14 @@
         "pda/pheanstalk": "^3.1"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.2",
         "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0",
-        "phpspec/phpspec": "~2.1",
         "laralib/l5scaffold": "1.0.4",
-        "symfony/dom-crawler": "~3.0",
-        "symfony/css-selector": "~3.0"
+        "mockery/mockery": "0.9.*",
+        "phpspec/phpspec": "~2.1",
+        "phpunit/phpunit": "~4.0",
+        "symfony/css-selector": "~3.0",
+        "symfony/dom-crawler": "~3.0"
     },
     "autoload": {
         "classmap": [
@@ -80,9 +84,6 @@
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize"
         ]
-    },
-    "config": {
-        "preferred-install": "dist"
     },
     "repositories": [
         {
