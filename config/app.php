@@ -128,13 +128,12 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
+        //Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
         Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
-        Illuminate\Routing\ControllerServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
         Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Encryption\EncryptionServiceProvider::class,
@@ -159,7 +158,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\ComposerServiceProvider::class,
+        //App\Providers\ComposerServiceProvider::class,
 
         Mews\Purifier\PurifierServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
@@ -174,11 +173,12 @@ return [
         Frozennode\Administrator\AdministratorServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         Thujohn\Rss\RssServiceProvider::class,
+		    //Conner\Tagging\Providers\TaggingServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
         Phphub\Sitemap\SitemapServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
         SocialiteProviders\Manager\ServiceProvider::class,
-        Overtrue\LaravelFollow\FollowServiceProvider::class,
+        //Overtrue\LaravelFollow\FollowServiceProvider::class,
         Jrean\UserVerification\UserVerificationServiceProvider::class,
         Naux\Mail\SendCloudServiceProvider::class,
 
