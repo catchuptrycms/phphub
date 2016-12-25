@@ -18,7 +18,11 @@ class DatabaseSeeder extends Seeder
         'SitesTableSeeder',
         'OauthClientsTableSeeder',
     ];
-
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
     public function run()
     {
         insanity_check();

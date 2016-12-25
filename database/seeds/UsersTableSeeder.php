@@ -25,6 +25,5 @@ class UsersTableSeeder extends Seeder
         foreach ($users as $key => $user) {
             $user->attachRole($hall_of_fame);
         }
-
     }
 }
