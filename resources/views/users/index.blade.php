@@ -7,11 +7,6 @@
 @section('content')
 
 <div class="panel panel-default users-index">
-
-    <div class="panel-heading text-center">
-        {{ lang('Newly Registered User List') }} ( {{ lang('Total User') }} {{ $siteStat->user_count }} )
-    </div>
-
     <div class="panel-body">
     @foreach ($users as $user)
         <div class="col-md-1 remove-padding-right">

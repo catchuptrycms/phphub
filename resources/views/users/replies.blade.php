@@ -17,7 +17,7 @@
 
   <ol class="breadcrumb">
       <li><a href="{{ route('users.show', $user->id) }}">Show User</a></li>
-      <li class="active">Ta 发表的回复（{{ $user->reply_count }}）</li>
+      <li class="active">Ta Replies（{{ $user->reply_count }}）</li>
   </ol>
 
   <div class="panel panel-default">

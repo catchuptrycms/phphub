@@ -1,3 +1,13 @@
+@if(Auth::check() && Auth::id() == $user->id)
+    <div class="box panel panel-default  text-center">
+
+        <div class="padding-sm user-basic-nav">
+            Do some nice tricks This is where the user is logged in, so take use of it
+        </div>
+
+    </div>
+    {{-- @include('users.partials.login_QR')--}}
+@endif
 <div class="box">
 
     <div class="padding-sm user-basic-info">
@@ -165,26 +175,22 @@
    <div class="padding-sm user-basic-nav">
        <ul class="list-group">
              <a href="{{ route('users.topics', $user->id) }}" class="{{ navViewActive('users.topics') }}">
-                 <li class="list-group-item"><i class="text-md fa fa-list-ul"></i> Ta 发布的话题</li>
+                 <li class="list-group-item"><i class="text-md fa fa-list-ul"></i> Topics</li>
              </a>
 
              <a href="{{ route('users.replies', $user->id) }}" class="{{ navViewActive('users.replies') }}">
-                 <li class="list-group-item"><i class="text-md fa fa-comment"></i> Ta 发表的回复</li>
+                 <li class="list-group-item"><i class="text-md fa fa-comment"></i> Replies</li>
              </a>
 
              <a href="{{ route('users.following', $user->id) }}" class="{{ navViewActive('users.following') }}">
-                 <li class="list-group-item"><i class="text-md fa fa-eye"></i> Ta 关注的用户</li>
+                 <li class="list-group-item"><i class="text-md fa fa-eye"></i> Following</li>
              </a>
 
              <a href="{{ route('users.votes', $user->id) }}" class="{{ navViewActive('users.votes') }}">
-                 <li class="list-group-item"><i class="text-md fa fa-thumbs-up"></i> Ta 赞过的话题</li>
+                 <li class="list-group-item"><i class="text-md fa fa-thumbs-up"></i> Votes</li>
              </a>
 
        </ul>
    </div>
 
 </div>
-
-@if(Auth::check() && Auth::id() == $user->id)
-  @include('users.partials.login_QR')
-@endif

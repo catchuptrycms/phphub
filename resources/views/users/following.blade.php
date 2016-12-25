@@ -16,7 +16,7 @@
 
   <ol class="breadcrumb">
       <li><a href="{{ route('users.show', $user->id) }}">Show User</a></li>
-      <li class="active">Ta 关注的用户</li>
+      <li class="active">Ta Following</li>
   </ol>
 
   <div class="panel panel-default">

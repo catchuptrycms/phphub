@@ -17,7 +17,7 @@
 
   <ol class="breadcrumb">
       <li><a href="{{ route('users.show', $user->id) }}">Show User</a></li>
-      <li class="active">Ta 发布的话题（{{ $user->topic_count }}）</li>
+      <li class="active">Ta Topics（{{ $user->topic_count }}）</li>
   </ol>
 
   <div class="panel panel-default">
